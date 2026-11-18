@@ -15,16 +15,16 @@ export const projectsData: Project[] = [
     status: 'study', // 'completed' | 'in_progress' | 'study'
     badgeAccent: 'blue',
     summary: {
-      fr: 'Conception d\'un rover autonome motorisé pour acheminer des bouteilles de gaz dans des zones périurbaines à voirie difficile.',
-      en: 'Design of a motorized autonomous rover for delivering gas cylinders in semi-urban areas with challenging terrain.',
+      fr: 'Conception d\'un rover autonome motorisé à forte capacité de charge (300 kg soit 0,3 T) pour acheminer des bouteilles de gaz dans des zones périurbaines à voirie difficile.',
+      en: 'Design of a heavy-duty motorized autonomous rover capable of carrying 300 kg (0.3 T) of gas cylinders in semi-urban areas with challenging terrain.',
     },
     context: {
-      fr: 'Dans le quartier Lycée de Tiébissou, l\'approvisionnement en bouteilles de gaz butane est souvent pénible pour les ménages en raison de l\'éloignement des dépôts et de voies d\'accès accidentées. Ce projet vise à concevoir une solution robotisée robuste et autonome pour sécuriser et fluidifier la livraison du dernier kilomètre.',
-      en: 'In the Lycée neighborhood of Tiébissou, domestic gas cylinder supply is challenging due to the distance to distribution depots and uneven dirt roads. This project designs a rugged, autonomous robotic solution to automate and secure last-mile delivery.',
+      fr: 'Dans le quartier Lycée de Tiébissou, l\'approvisionnement en bouteilles de gaz butane est souvent pénible pour les ménages et commerces en raison de l\'éloignement des dépôts et de voies d\'accès accidentées. Ce projet vise à concevoir une solution robotisée robuste de forte capacité (jusqu\'à 300 kg / 0,3 T) pour sécuriser et fluidifier la livraison.',
+      en: 'In the Lycée neighborhood of Tiébissou, domestic and commercial gas cylinder supply is challenging due to distance to depots and rugged dirt roads. This project designs a rugged, heavy-payload autonomous robot (up to 300 kg / 0.3 T) to automate last-mile delivery.',
     },
     problem: {
-      fr: 'Le transport manuel de charges lourdes (bouteilles de 6 kg et 12,5 kg) présente des risques physiques et ergonomiques, tandis que les véhicules classiques peinent à circuler sur les pistes dégradées ou étroites.',
-      en: 'Manual transport of heavy loads (6 kg and 12.5 kg gas cylinders) carries ergonomic risks, while conventional delivery vehicles struggle on narrow, unpaved local roads.',
+      fr: 'Le transport manuel de charges lourdes (bouteilles multiples cumulant jusqu\'à 300 kg / 0,3 T) présente des risques physiques et ergonomiques majeurs, tandis que les véhicules classiques peinent à circuler sur les pistes dégradées ou étroites.',
+      en: 'Manual transport of heavy loads (multiple cylinders totaling up to 300 kg / 0.3 T) carries severe ergonomic hazards, while conventional delivery vehicles struggle on narrow, unpaved local tracks.',
     },
     solution: {
       fr: 'Un châssis mobile tout-terrain équipé d\'une motorisation coupleuse, de capteurs ultrasoniques et infrarouges d\'évitement d\'obstacles, d\'un module de navigation GPS et d\'une unité de commande microcontrôlée capable de suivre un itinéraire programmé avec télé-surveillance.',
@@ -73,7 +73,7 @@ export const projectsData: Project[] = [
       ],
     },
     metrics: [
-      { label: { fr: 'Charge utile visée', en: 'Target Payload' }, value: '15 kg' },
+      { label: { fr: 'Charge utile visée', en: 'Target Payload' }, value: '300 kg (0,3 T)' },
       { label: { fr: 'Autonomie estimée', en: 'Estimated Range' }, value: '3+ h' },
       { label: { fr: 'Vitesse de croisière', en: 'Cruising Speed' }, value: '5 km/h' },
     ],
@@ -81,12 +81,12 @@ export const projectsData: Project[] = [
   {
     id: 'balise-gps-thingsboard',
     title: {
-      fr: 'Balise GPS connectée à ThingsBoard',
-      en: 'Connected GPS Tracker with ThingsBoard',
+      fr: 'Balise GPS connectée pour les véhicules de l\'INP-HB',
+      en: 'Connected GPS Tracker for INP-HB Vehicles',
     },
     subtitle: {
-      fr: 'Solution de géolocalisation de véhicule par Arduino, SIM808 et télémétrie cloud IoT',
-      en: 'Vehicle tracking solution with Arduino, SIM808 module, and IoT cloud telemetry',
+      fr: 'Solution de géolocalisation de véhicules de l\'INP-HB par Arduino, SIM808 et télémétrie ThingsBoard',
+      en: 'Vehicle tracking solution for INP-HB with Arduino, SIM808 module, and ThingsBoard IoT telemetry',
     },
     category: 'iot',
     status: 'completed',
@@ -156,12 +156,12 @@ export const projectsData: Project[] = [
   {
     id: 'gestion-notes-web',
     title: {
-      fr: 'Application web de gestion des notes académiques',
-      en: 'Academic Grade Management Web Application',
+      fr: 'Application web de gestion des notes pour l\'administration de l\'ESI',
+      en: 'Academic Grade Management Web Application for ESI Administration',
     },
     subtitle: {
-      fr: 'Plateforme complète de scolarité : étudiants, professeurs, cours, notes et réclamations',
-      en: 'Comprehensive academic portal: students, faculty, courses, grading, and appeals',
+      fr: 'Plateforme complète de scolarité ESI : étudiants, professeurs, cours, notes et réclamations',
+      en: 'Comprehensive ESI academic portal: students, faculty, courses, grading, and appeals',
     },
     category: 'web',
     status: 'completed',

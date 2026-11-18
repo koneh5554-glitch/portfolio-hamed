@@ -95,13 +95,22 @@ export const ContactSection: React.FC = () => {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="block text-[11px] text-slate-500 dark:text-slate-400">Téléphone</span>
-                    <a
-                      href={`tel:${contactData.phone.replace(/\s+/g, '')}`}
-                      className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white hover:text-blue-500 transition-colors"
-                    >
-                      {contactData.phone}
-                    </a>
+                    <span className="block text-[11px] text-slate-500 dark:text-slate-400">Appels direct</span>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <a
+                        href="tel:+2250141467705"
+                        className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white hover:text-blue-500 transition-colors"
+                      >
+                        +225 01 41 46 77 05
+                      </a>
+                      <span className="text-slate-400">•</span>
+                      <a
+                        href="tel:+2250716767488"
+                        className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white hover:text-blue-500 transition-colors"
+                      >
+                        +225 07 16 76 74 88
+                      </a>
+                    </div>
                   </div>
                 </div>
 

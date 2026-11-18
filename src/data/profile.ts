@@ -104,10 +104,10 @@ export const profileData: ProfileData = {
     specialty: 'Électronique, Informatique et Télécommunications',
     specialtyShort: 'EIT',
     level: {
-      fr: 'Dernière année de Technicien Supérieur (Bac+2 / Bac+3)',
-      en: 'Final year Higher Technician (Associate / Undergraduate)',
+      fr: '3ème année de Technicien Supérieur EIT (Fin de cycle)',
+      en: '3rd Year Higher Technician in EIT (Final Year)',
     },
-    location: 'Yamoussoukro / Côte d\'Ivoire',
+    location: 'Yamoussoukro / Bouaké, Côte d\'Ivoire',
   },
   objectives: [
     {

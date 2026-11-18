@@ -7,28 +7,66 @@ export interface LeadershipRole {
   department: string;
   period: LocalizedString;
   summary: LocalizedString;
+  positions: {
+    period: string;
+    title: LocalizedString;
+    organization: LocalizedString;
+    description: LocalizedString;
+  }[];
   activities: LeadershipActivity[];
 }
 
 export const leadershipData: LeadershipRole = {
   roleTitle: {
-    fr: 'Vice-Président de l\'Association de la Spécialité EIT',
-    en: 'Vice-President of the EIT Student Association',
+    fr: 'Engagement Associatif & Responsabilités de Leadership',
+    en: 'Community Engagement & Leadership Responsibilities',
   },
   organization: {
-    fr: 'Association des Élèves Techniciens en Électronique, Informatique et Télécommunications',
-    en: 'Association of Electronics, Computer Science & Telecommunications Students',
+    fr: 'Association des Polytechniciens de Bouaké (APOLYB) & Filière EIT',
+    en: 'Bouaké Polytechnicians Association (APOLYB) & EIT Student Body',
   },
   institution: 'Institut National Polytechnique Félix Houphouët-Boigny (INP-HB)',
   department: 'École Supérieure d\'Industrie (ESI)',
   period: {
-    fr: 'Mandat en cours',
-    en: 'Current Tenure',
+    fr: 'Mandats 2025 - 2027',
+    en: 'Tenures 2025 - 2027',
   },
   summary: {
-    fr: 'En tant que Vice-Président, je participe activement au pilotage stratégique de l\'association, à la coordination des équipes projets, à l\'organisation d\'événements majeurs et au mentorat des nouvelles promotions. Cet engagement renforce au quotidien mes compétences en leadership, communication, gestion des imprévus et travail collaboratif.',
-    en: 'As Vice-President, I actively lead strategic planning, cross-functional project team coordination, flagship event logistics, and peer mentorship. This responsibility continually hones my leadership, high-stakes communication, adaptability, and collaborative execution.',
+    fr: 'Fortement investi dans la vie associative de l\'INP-HB, j\'ai exercé les fonctions de Vice-Président de l\'APOLYB (2025-2026) avant d\'être nommé Adjoint au Conseil Général (depuis Octobre 2026). En parallèle, mon engagement au sein de l\'association de spécialité EIT me permet de piloter des initiatives majeures, de coordonner des équipes et de mentorer les nouvelles promotions.',
+    en: 'Deeply committed to student life and peer mentorship at INP-HB, I served as Vice-President of APOLYB (2025-2026) before being appointed to the General Council Board (since October 2026). Concurrently, my active role within the EIT engineering association empowers me to lead flagship student initiatives, oversee logistics, and tutor incoming cohorts.',
   },
+  positions: [
+    {
+      period: 'Depuis Octobre 2026',
+      title: {
+        fr: 'Adjoint au Conseil Général',
+        en: 'Deputy to the General Council',
+      },
+      organization: {
+        fr: 'Association des Polytechniciens de Bouaké (APOLYB)',
+        en: 'Bouaké Polytechnicians Association (APOLYB)',
+      },
+      description: {
+        fr: 'Supervision stratégique, gouvernance associative et représentation des étudiants polytechniciens originaires de Bouaké.',
+        en: 'Strategic oversight, student body governance, and institutional representation for polytechnic students from Bouaké.',
+      },
+    },
+    {
+      period: '2025 - 2026',
+      title: {
+        fr: 'Vice-Président de l\'APOLYB',
+        en: 'Vice-President of APOLYB',
+      },
+      organization: {
+        fr: 'Association des Polytechniciens de Bouaké (APOLYB)',
+        en: 'Bouaké Polytechnicians Association (APOLYB)',
+      },
+      description: {
+        fr: 'Coordination générale des activités, gestion des équipes projets, organisation des journées d\'accueil et événements culturels.',
+        en: 'General coordination of student activities, project team management, and organization of flagship student events.',
+      },
+    },
+  ],
   activities: [
     {
       id: 'integration-25inp',

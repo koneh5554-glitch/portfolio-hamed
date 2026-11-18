@@ -152,37 +152,35 @@ export const HeroSection: React.FC = () => {
               {/* Card Container */}
               <div className="relative rounded-3xl glass-card overflow-hidden p-6 sm:p-8 border border-white/20 dark:border-white/10 shadow-2xl">
                 
-                {/* Photo / Avatar Placeholder with Tech Aesthetics */}
-                <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-blue-950 flex flex-col items-center justify-center p-6 text-center border border-white/10 group">
+                {/* Photo / Avatar Card with Real Image */}
+                <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-slate-900 border border-white/10 shadow-inner group">
+                  <img
+                    src="/avatar.jpg"
+                    alt={`${profileData.fullName} (${profileData.pseudonym})`}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
                   
-                  {/* Subtle circuit pattern overlay */}
-                  <div className="absolute inset-0 bg-tech-grid opacity-30"></div>
-
-                  {/* Centered Monogram / Avatar Graphic */}
-                  <div className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-xl shadow-blue-500/30 ring-4 ring-white/10">
-                    <span className="text-4xl sm:text-5xl font-black text-white tracking-wider">
-                      {profileData.pseudonym}
-                    </span>
-                  </div>
-
-                  {/* Badge under photo */}
-                  <div className="relative z-10 mt-6 flex flex-col items-center">
-                    <span className="text-base sm:text-lg font-bold text-white tracking-wide">
-                      {profileData.fullName}
-                    </span>
-                    <span className="text-xs text-blue-400 font-semibold mt-1">
-                      {profileData.academic.specialtyShort} • {profileData.academic.institutionShort}
-                    </span>
-                    <span className="text-[11px] text-slate-400 mt-2 italic max-w-xs">
-                      Photo professionnelle facilement remplaçable via <code>/public/avatar.jpg</code>
-                    </span>
-                  </div>
+                  {/* Subtle Gradient Overlay at bottom */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none"></div>
 
                   {/* Corner accents */}
-                  <div className="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-blue-400/60"></div>
-                  <div className="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-blue-400/60"></div>
-                  <div className="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-blue-400/60"></div>
-                  <div className="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-blue-400/60"></div>
+                  <div className="absolute top-3 left-3 w-3 h-3 border-t-2 border-l-2 border-blue-400"></div>
+                  <div className="absolute top-3 right-3 w-3 h-3 border-t-2 border-r-2 border-blue-400"></div>
+                  <div className="absolute bottom-3 left-3 w-3 h-3 border-b-2 border-l-2 border-blue-400"></div>
+                  <div className="absolute bottom-3 right-3 w-3 h-3 border-b-2 border-r-2 border-blue-400"></div>
+
+                  {/* Badge & Info Overlay at Bottom */}
+                  <div className="absolute bottom-4 left-4 right-4 z-10 flex flex-col items-center text-center p-3 rounded-xl bg-slate-900/85 backdrop-blur-md border border-white/10">
+                    <span className="text-sm font-black text-white tracking-wide flex items-center gap-2">
+                      <span>{profileData.fullName}</span>
+                      <span className="px-1.5 py-0.5 rounded bg-blue-600 text-white text-[10px] font-extrabold">
+                        {profileData.pseudonym}
+                      </span>
+                    </span>
+                    <span className="text-[11px] text-blue-400 font-semibold mt-0.5">
+                      {profileData.academic.specialtyShort} • {profileData.academic.institutionShort}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Floating Micro-Card: Dual Competence */}

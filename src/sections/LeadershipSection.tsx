@@ -41,6 +41,26 @@ export const LeadershipSection: React.FC = () => {
           <p className="mt-6 text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
             {leadershipData.summary[language]}
           </p>
+
+          {/* Governance Positions */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-200 dark:border-slate-800">
+            {leadershipData.positions.map((pos, pIdx) => (
+              <div key={pIdx} className="p-4 rounded-xl bg-slate-100/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                  {pos.period}
+                </span>
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white mt-1.5">
+                  {pos.title[language]}
+                </h4>
+                <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                  {pos.organization[language]}
+                </p>
+                <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-1 leading-snug">
+                  {pos.description[language]}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* 7 Flagship Activities Grid */}
