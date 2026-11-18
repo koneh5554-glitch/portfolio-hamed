@@ -227,6 +227,7 @@ export const projectsData: Project[] = [
       { label: { fr: 'Moteur SQL', en: 'Database Engine' }, value: 'MariaDB' },
       { label: { fr: 'Temps de calcul', en: 'Calc Time' }, value: '< 50 ms' },
     ],
+    githubUrl: 'https://github.com/koneh5554-glitch',
   },
   {
     id: 'service-web-ubuntu-server',

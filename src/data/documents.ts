@@ -8,16 +8,35 @@ export const documentsData: DocumentItem[] = [
       en: 'Professional Resume / CV (PDF)',
     },
     description: {
-      fr: 'Synthèse détaillée de mon parcours académique à l\'INP-HB, mes compétences techniques, mes projets et mes coordonnées.',
-      en: 'Detailed summary of my academic background at INP-HB, technical skillset, projects, and contact details.',
+      fr: 'Curriculum Vitæ officiel de KONÉ HAMED (CC), Élève Technicien Supérieur EIT à l\'INP-HB ESI. Compétences complètes, parcours et projets.',
+      en: 'Official Resume of KONÉ HAMED (CC), Higher Technician Student in EIT at INP-HB ESI. Full skillset, career, and engineering projects.',
     },
     category: {
-      fr: 'Document Principal',
-      en: 'Primary Document',
+      fr: 'Document Officiel',
+      en: 'Official Document',
     },
     filename: 'CV_KONE_HAMED_EIT.pdf',
     fileUrl: '/docs/CV_KONE_HAMED_EIT.pdf',
-    size: 'PDF • 1 Page',
+    size: 'PDF Officiel (265 Ko)',
+    available: true,
+  },
+  {
+    id: 'cv-hamed-kone-docx',
+    title: {
+      fr: 'Curriculum Vitæ Professionnel (Format Word .docx)',
+      en: 'Professional Resume / CV (Word .docx format)',
+    },
+    description: {
+      fr: 'Version Microsoft Word modifiable du CV professionnel de KONÉ HAMED.',
+      en: 'Editable Microsoft Word version of KONÉ HAMED\'s professional resume.',
+    },
+    category: {
+      fr: 'Document Source',
+      en: 'Source Document',
+    },
+    filename: 'CV_KONE_HAMED_EIT.docx',
+    fileUrl: '/docs/CV_KONE_HAMED_EIT.docx',
+    size: 'Word DOCX (1.7 Mo)',
     available: true,
   },
   {

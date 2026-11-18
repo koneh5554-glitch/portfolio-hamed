@@ -21,7 +21,7 @@ export const contactData: ContactConfig = {
   whatsappDisplay: '+225 01 41 46 77 05 / 07 16 76 74 88',
   location: 'Yamoussoukro / Bouaké, Côte d\'Ivoire',
   cityOrigin: 'Bouaké',
-  githubUrl: 'https://github.com/konehamed',
+  githubUrl: 'https://github.com/koneh5554-glitch',
   linkedinUrl: 'https://linkedin.com/in/hamed-kone-eit',
   
   // Configuration d'envoi Web3Forms
