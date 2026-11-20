@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../translations/LanguageContext';
 import { profileData } from '../data/profile';
 import { contactData } from '../data/contact';
-import { ArrowUp, Mail, Phone } from 'lucide-react';
+import { ArrowUp, Mail, Phone, FileDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
 export const Footer: React.FC = () => {
@@ -36,8 +37,8 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex items-center gap-2 mt-2">
               <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
               <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
                 {t.footer.statusText}
@@ -48,38 +49,33 @@ export const Footer: React.FC = () => {
           {/* Quick links */}
           <div className="flex flex-col gap-2">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-2">
-              Navigation
+              Pages du site
             </h4>
-            <ul className="space-y-1.5 text-xs sm:text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <a href="/#about" className="hover:text-blue-500 transition-colors">
-                  {t.nav.about}
-                </a>
+                <Link to="/" className="hover:text-blue-500 transition-colors">
+                  {language === 'fr' ? 'Accueil' : 'Home'}
+                </Link>
               </li>
               <li>
-                <a href="/#skills" className="hover:text-blue-500 transition-colors">
-                  {t.nav.skills}
-                </a>
+                <Link to="/projets" className="hover:text-blue-500 transition-colors">
+                  {language === 'fr' ? 'Projets & Réalisations' : 'Projects'}
+                </Link>
               </li>
               <li>
-                <a href="/#projects" className="hover:text-blue-500 transition-colors">
-                  {t.nav.projects}
-                </a>
+                <Link to="/stages" className="hover:text-blue-500 transition-colors">
+                  {language === 'fr' ? 'Stages & Immersion' : 'Internships'}
+                </Link>
               </li>
               <li>
-                <a href="/#experience" className="hover:text-blue-500 transition-colors">
-                  {t.nav.experience}
-                </a>
+                <Link to="/parcours" className="hover:text-blue-500 transition-colors">
+                  {language === 'fr' ? 'Parcours & Compétences' : 'Background & Skills'}
+                </Link>
               </li>
               <li>
-                <a href="/#education" className="hover:text-blue-500 transition-colors">
-                  {t.nav.education}
-                </a>
-              </li>
-              <li>
-                <a href="/#leadership" className="hover:text-blue-500 transition-colors">
-                  {t.nav.leadership}
-                </a>
+                <Link to="/contact" className="hover:text-blue-500 transition-colors">
+                  {language === 'fr' ? 'Contact' : 'Contact'}
+                </Link>
               </li>
             </ul>
           </div>
@@ -89,7 +85,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-2">
               {t.contact.title}
             </h4>
-            <div className="flex flex-col gap-2 text-xs sm:text-sm">
+            <div className="flex flex-col gap-2.5 text-xs sm:text-sm">
               <a
                 href={`mailto:${contactData.email}`}
                 className="flex items-center gap-2 hover:text-blue-500 transition-colors truncate"
@@ -98,19 +94,31 @@ export const Footer: React.FC = () => {
                 <span className="truncate">{contactData.email}</span>
               </a>
               <a
-                href={`tel:${contactData.whatsappNumber}`}
+                href={`tel:${contactData.phone.replace(/\s+/g, '')}`}
                 className="flex items-center gap-2 hover:text-blue-500 transition-colors"
               >
                 <Phone className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                 <span>{contactData.phone}</span>
               </a>
+              
+              <div className="pt-2">
+                <a
+                  href="./docs/CV_KONE_HAMED_EIT.pdf"
+                  download="CV_KONE_HAMED_EIT.pdf"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 text-xs font-bold hover:bg-blue-600 hover:text-white transition-all"
+                >
+                  <FileDown className="w-3.5 h-3.5" />
+                  <span>CV Officiel (PDF)</span>
+                </a>
+              </div>
+
               <div className="flex items-center gap-3 mt-2">
                 <a
                   href={contactData.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
-                  className="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
+                  className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
                 >
                   <GithubIcon className="w-4 h-4" />
                 </a>
@@ -119,7 +127,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
+                  className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
                 >
                   <LinkedinIcon className="w-4 h-4" />
                 </a>
@@ -130,19 +138,19 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-slate-200 dark:border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <div className="flex items-center gap-1.5 text-center sm:text-left">
-            <span>© {new Date().getFullYear()} {profileData.fullName} ({profileData.pseudonym}).</span>
-            <span>{t.footer.allRightsReserved}</span>
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-500">
+          <div>
+            © {new Date().getFullYear()} {profileData.fullName} ({profileData.pseudonym}). {t.footer.allRightsReserved}
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="text-slate-500 flex items-center gap-1">
-              INP-HB • ESI • STIC
+          <div className="flex items-center gap-6">
+            <span className="hidden sm:inline">
+              INP-HB • ESI • STIC • EIT
             </span>
+
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-800 hover:bg-blue-600 hover:text-white text-slate-700 dark:text-slate-300 transition-all cursor-pointer"
+              className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors cursor-pointer"
             >
               <span>{t.footer.backToTop}</span>
               <ArrowUp className="w-3.5 h-3.5" />

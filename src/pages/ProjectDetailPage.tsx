@@ -36,7 +36,7 @@ export const ProjectDetailPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Projet introuvable</h2>
           <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">Le projet demandé n'existe pas ou a été déplacé.</p>
           <Link
-            to="/#projects"
+            to="/projets"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white font-bold text-xs"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -57,7 +57,7 @@ export const ProjectDetailPage: React.FC = () => {
         {/* Breadcrumb Navigation */}
         <div className="flex items-center justify-between mb-8">
           <Link
-            to="/#projects"
+            to="/projets"
             className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
